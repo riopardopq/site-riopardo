@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de Produtos Químicos Alimentares</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eafaf1;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #0044cc, #00aa66);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo-container {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        header img {
+            max-width: 120px;
+            display: block;
+        }
+        .header-text {
+            flex: 1;
+        }
+        nav {
+            background: #007744;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 50px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #00aa66;
+        }
+        footer {
+            background: #007744;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+        }
+        #contador {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function atualizarContador() {
+            if (localStorage.pageViews) {
+                localStorage.pageViews = Number(localStorage.pageViews) + 1;
+            } else {
+                localStorage.pageViews = 1;
+            }
+            document.getElementById("contador").innerText = "Visitantes: " + localStorage.pageViews;
+        }
+        window.onload = atualizarContador;
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="RIOberio.png" alt="Logo da Empresa">
+        </div>
+        <div class="header-text">
+            <h1>RIO PARDO Produtos Químicos</h1>
+            <p>Fornecendo produtos químicos alimentares de alta qualidade desde 2008</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#produtos">Produtos e Serviços</a></li>
+            <li><a href="#qualidade">Compromisso com a Qualidade</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="quem-somos">
+        <h2>Quem Somos</h2>
+        <p>Fundada em 2008 por Joaquim Donizeti Barbosa, nossa empresa se destaca na produção de produtos químicos alimentares para a indústria de batata palha e massas.</p>
+    </section>
+
+    <section id="produtos">
+        <h2>Produtos e Serviços</h2>
+        <p>Oferecemos soluções químicas alimentares que garantem qualidade e segurança na produção de batata palha e massas.</p>
+    </section>
+
+    <section id="qualidade">
+        <h2>Compromisso com a Qualidade</h2>
+        <p>Seguimos rigorosos padrões de qualidade para garantir a satisfação de nossos clientes.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:riopardopq@gmail.com" style="color: #007744; text-decoration: none; font-weight: bold;">riopardopq@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> Telefone / Whatsapp: <a href="https://wa.me/5535991769021" target="_blank" style="color: #007744; text-decoration: none; font-weight: bold;">(35) 9 9176-9021</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Eugênio Inácio de Souza, 397 - Copasa, Ipuiúna-MG</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Empresa de Produtos Químicos Alimentares. Todos os direitos reservados.</p>
+        <p id="contador">Visitantes: 0</p>
+    </footer>
+</body>
+</html>
